@@ -20,37 +20,47 @@ The goal of this project is to practice with:
 1- Fork this repo.
 
 2- Clone the repo from your forked repo down to your computer:
+```
+git clone https://github.com/[your-user-name]/[your-forked-repo].git
+ ```
+    
+3- `cd` into your new folder:
+```
+cd your-repo-name
+ ```
+    
+4- Install dependencies:
+```
+ npm install
+```
 
-    ```
-    git clone https://github.com/[your-user-name]/[your-forked-repo].git
-    ```
+5- Environment Variables:
+    The project requires some environment variables to function properly. Create a **.env** file in the root directory and add the following variable:
+```
+ API_KEY=your-meaningcloud-api-key
+ ```
 
-- `cd` into your new folder and run:
-    ```
-        cd your-repo-name
-    ```
-3- Install dependencies:
-   ```npm install
-   ```
+6- Running the Project:
+- To run the project in development mode with live reloading:
+```
+npm run build-dev
+```
+This will start a development server at http://localhost:3000,  with Webpack's dev server.
 
-4- Environment Variables:
-    The project requires some environment variables to function properly. Create a **.env**file in the root directory and add the following variable:
-    ```
-    API_KEY=your-meaningcloud-api-key
-    ```
+- To create a production build: run
+```
+npm run build-prod
+```
+This will generate optimized files in the **dist** folder.
 
-5- Running the Project:
-   ```
-    Development Server : npm run build-dev
-    Production Build : npm run build-prod
-   ```
+7- Start the Server:
+   This app runs on localhost:8081, but you can of course edit that in server.js
+```
+npm start
+```
 
-6- Start the Server:
-- this app runs on localhost:8081, but you can of course edit that in server.js
-    ```npm start
-    ```
-
-7- The project uses Jest for unit testing. Tests are located in the __tests__ folder.
-  - To run tests:
-    ```
-    npm test
+8- The project uses Jest for unit testing. Tests are located in the __test__ folder.
+   To run test:
+```
+npm test
+```
